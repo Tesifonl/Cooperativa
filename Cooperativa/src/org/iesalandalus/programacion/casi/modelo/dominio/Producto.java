@@ -25,9 +25,14 @@ public abstract class Producto {
 				setEnvasado(producto.isEnvasado());
 			}
 	}
+	
 
-	protected LocalDate getFechaCorte() {
-		return fechaCorte;
+	private void setEnvasado(boolean envasado) {
+		this.envasado = envasado;
+	}
+
+	protected boolean isEnvasado() {
+		return envasado;
 	}
 
 	private void setFechaCorte(LocalDate fechaCorte) {
@@ -39,22 +44,19 @@ public abstract class Producto {
 		}else {this.fechaCorte = fechaCorte;} 
 	}
 
-	protected boolean isEnvasado() {
-		return envasado;
+	protected LocalDate getFechaCorte() {
+		return fechaCorte;
 	}
 
-	private void setEnvasado(boolean envasado) {
-		this.envasado = envasado;
-	}
 
 	public abstract void setCosteProduccion();
 	
-	private double getCosteProduccion() {
-		return costeProduccion;
-	}
-
 	public void setCosteProduccion(double costeProduccion) {
 		this.costeProduccion = costeProduccion;
+	}
+	
+	public double getCosteProduccion() {
+		return costeProduccion;
 	}
 
 	@Override

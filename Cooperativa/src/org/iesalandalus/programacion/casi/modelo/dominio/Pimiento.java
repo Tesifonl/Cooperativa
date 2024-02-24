@@ -42,8 +42,10 @@ public class Pimiento extends Producto {
 		if (!isEnvasado()) {
 			CosteProduccion=1;
 			}else {CosteProduccion=1.30;}
-		
-		
+		// Aqui es donde me quedé en el examen, no supé implantar
+		// los metodos abstractos pero por error mio, pq no puse los
+		//modificadores de acceso de la clase madre correctamente.
+		double coste=getCosteProduccion();
 		// TODO Auto-generated method stub
 		
 	}
